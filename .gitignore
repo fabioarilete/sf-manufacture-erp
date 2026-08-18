@@ -1,0 +1,70 @@
+# ============================================
+# BACKEND
+# ============================================
+
+# Dependências do backend
+backend/node_modules/
+backend/dist/
+
+# Arquivos de ambiente do backend
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Logs do backend
+backend/logs/
+backend/*.log
+backend/npm-debug.log*
+
+# Arquivos do TypeScript (backend)
+backend/*.tsbuildinfo
+
+# ============================================
+# FRONTEND (quando criar)
+# ============================================
+
+# Dependências do frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# Arquivos de ambiente do frontend
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Logs do frontend
+frontend/logs/
+frontend/*.log
+frontend/npm-debug.log*
+
+# Arquivos do frontend (React/Vite)
+frontend/.vite/
+frontend/.cache/
+
+# ============================================
+# ARQUIVOS GERAIS
+# ============================================
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.zenodo
+
+# Arquivos de backup
+*.bak
+*.tmp
+
+# Arquivos de sistema
+*.log
+*.pid
+*.seed
+*.pid.lock

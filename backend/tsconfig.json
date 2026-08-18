@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                 // Versão do JavaScript que será gerado
+    "module": "commonjs",               // Sistema de módulos (Node.js usa CommonJS)
+    "lib": ["ES2020"],                  // Bibliotecas do JavaScript disponíveis
+    "outDir": "./dist",                 // Pasta onde o código compilado será salvo
+    "rootDir": "./src",                 // Pasta onde estão os arquivos TypeScript
+    "strict": true,                     // Ativa todas as verificações de tipo
+    "esModuleInterop": true,            // Permite importar módulos CommonJS
+    "skipLibCheck": true,               // Pula verificação de tipos em bibliotecas
+    "forceConsistentCasingInFileNames": true, // Exige nomes de arquivos com mesmo case
+    "experimentalDecorators": true,     // Necessário para TypeORM
+    "emitDecoratorMetadata": true,      // Necessário para TypeORM
+    "strictPropertyInitialization": false, // Não exige que propriedades sejam inicializadas
+    "types": ["node"]
+  },
+  "include": ["src/**/*"],              // Quais arquivos incluir na compilação
+  "exclude": ["node_modules", "dist"]   // Quais arquivos excluir
+}
