@@ -2,6 +2,9 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { Product } from "../entities/Product";
 import { RawMaterial } from "../entities/RawMaterial"; // <-- ADICIONAR ESTA LINHA
+import { ProductComposition } from "../entities/ProductComposition";
+import { Operation } from "../entities/Operation";
+import { ProductOperation } from "../entities/ProductOperation";
 import * as dotenv from "dotenv";
 import * as path from "path";
 
@@ -16,7 +19,13 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_NAME || "sf_manufacture_erp",
   synchronize: true,
   logging: true,
-  entities: [Product, RawMaterial], // <-- ADICIONAR AQUI
+  entities: [
+    Product,
+    RawMaterial,
+    ProductComposition,
+    Operation,
+    ProductOperation,
+  ], // <-- ADICIONAR AQUI
   migrations: ["src/migrations/*.ts"],
   subscribers: [],
 });

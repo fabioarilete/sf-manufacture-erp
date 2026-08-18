@@ -3,6 +3,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import productRoutes from "./routes/producRoutes";
 import rawMaterialRoutes from "./routes/rawMaterialRoutes";
+import productCompositionRoutes from "./routes/productCompositionRoutes";
+import operationRoutes from "./routes/operationRoutes";
+import productOperationRoutes from "./routes/productOperationRoutes";
 
 dotenv.config();
 
@@ -15,6 +18,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/products", productRoutes);
 app.use("/api/raw-materials", rawMaterialRoutes);
+app.use("/api/product-compositions", productCompositionRoutes);
+app.use("/api/operations", operationRoutes);
+app.use("/api/product-operations", productOperationRoutes);
 
 app.get("/api/health", (req: Request, res: Response) => {
   res.json({
